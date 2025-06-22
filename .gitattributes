@@ -1,2 +1,32 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mudar Cor de Fundo</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.5s;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="mudarCor()">Mudar cor de fundo</button>
+
+  <script>
+    function mudarCor() {
+      const corAleatoria = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      document.body.style.backgroundColor = corAleatoria;
+    }
+  </script>
+</body>
+</html>
